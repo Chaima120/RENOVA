@@ -1,0 +1,14 @@
+{
+    "name": "renova-france",
+    "version": "1.0.0",
+    "description": "Site web de RENOVA FRANCE ",
+    "main": "index.html",
+    "scripts": {
+        "start": "http-server ./ -o"
+    },
+    "author": "Ton Nom",
+    "license": "MIT",
+    "devDependencies": {
+        "http-server": "^14.1.1"
+    }
+}

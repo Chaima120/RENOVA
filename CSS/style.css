@@ -1,0 +1,103 @@
+/* CSS/style.css */
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F9F5F0; /* Couleur nude */
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background-color: #E2CFC0; /* Couleur nude */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Logo */
+.logo h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #D1B7A1; /* Couleur nude un peu plus sombre */
+}
+
+/* Section */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Titre de section */
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Bouton */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E2CFC0; /* Couleur nude */
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #D1B7A1; /* Couleur nude un peu plus sombre */
+    transform: scale(1.05);
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 300px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+/* Informations de contact */
+.contact-info {
+    margin-top: 20px;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #E2CFC0; /* Couleur nude */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
