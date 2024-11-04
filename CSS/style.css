@@ -1,30 +1,50 @@
-/* CSS/style.css */
-
-/* Styles généraux */
-body {
-    font-family: Arial, sans-serif;
+/* Reset de base */
+* {
     margin: 0;
     padding: 0;
-    background-color: #F9F5F0; /* Couleur nude */
-    color: #333;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f4ef; /* Couleur nude */
+    color: #333; /* Couleur du texte */
+    background-color: #8a4b4b;
+}
+
+/* Style pour le logo */
+.logo {
+    display: flex;
+    align-items: center; /* Aligne le logo et le texte au centre */
+}
+
+.logo-img {
+    width: 60px; /* Ajustez la taille du logo selon vos besoins */
+    height: auto; /* Conserve les proportions */
+    margin-right: 10px; /* Espacement entre le logo et le texte */
 }
 
 /* En-tête */
 header {
-    background-color: #E2CFC0; /* Couleur nude */
+    background-color: #f0e3d2; /* Couleur nude claire */
     padding: 20px;
     text-align: center;
 }
 
-/* Logo */
-.logo h1 {
-    margin: 0;
+header .logo h1 {
+    color: #8c6a56; /* Couleur pour le titre */
     font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-/* Navigation */
+header .logo p {
+    color: #c2b2a3; /* Couleur pour le sous-titre */
+    font-size: 1.2em;
+}
+
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -35,69 +55,134 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #8c6a56; /* Couleur des liens */
+    font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #D1B7A1; /* Couleur nude un peu plus sombre */
+    color: #b57e6a; /* Couleur au survol */
 }
 
-/* Section */
+/* Sections */
 section {
     padding: 40px 20px;
-    text-align: center;
+    text-align: center; /* Centrer le texte */
 }
 
-/* Titre de section */
-h2 {
-    font-size: 2em;
+.intro {
+    margin: 20px 0;
+}
+
+.intro h2 {
+    font-size: 2.5em;
     margin-bottom: 20px;
+    animation: fadeInUp 0.5s forwards;
+    opacity: 0;
 }
 
-/* Bouton */
+.intro p {
+    font-size: 1.2em;
+}
+
 .btn {
     display: inline-block;
+    background-color: #8c6a56; /* Couleur des boutons */
+    color: white;
     padding: 10px 20px;
-    background-color: #E2CFC0; /* Couleur nude */
-    color: #333;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-    background-color: #D1B7A1; /* Couleur nude un peu plus sombre */
+    background-color: #b57e6a; /* Couleur au survol du bouton */
     transform: scale(1.05);
 }
 
-/* Formulaire */
-form {
+/* Services */
+.services-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permet d'avoir plusieurs lignes */
+}
+
+.service {
+    background-color: #fff;
+    border: 1px solid #d1c6b8;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact */
+.contact-info h3 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+form {
     margin-top: 20px;
 }
 
-input, textarea {
-    width: 300px;
-    margin: 10px 0;
+form input, form textarea {
+    width: 80%;
     padding: 10px;
-    border: 1px solid #CCC;
+    margin: 10px 0;
+    border: 1px solid #d1c6b8;
     border-radius: 5px;
 }
 
-/* Informations de contact */
-.contact-info {
-    margin-top: 20px;
+form button {
+    background-color: #8c6a56; /* Couleur du bouton */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #b57e6a; /* Couleur au survol */
 }
 
 /* Pied de page */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #E2CFC0; /* Couleur nude */
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    background-color: #f0e3d2; /* Couleur nude claire */
+}
+
+footer p {
+    color: #8c6a56;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column; /* Alignement en colonne sur mobile */
+    }
+
+    .service {
+        width: 100%; /* Pleine largeur sur mobile */
+    }
 }
